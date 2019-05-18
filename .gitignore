@@ -39,3 +39,6 @@ yarn-debug.log*
 
 # env variables that are private
 /config/initializers/app_env_vars.rb
+
+# gemfile lock
+Gemfile.lock
