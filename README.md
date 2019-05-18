@@ -22,7 +22,6 @@
 - item resource using itradenetwork dataset
 - dataset -> seller_id, flyers per date, item, price, 
 - flyer object
-- 
 
 ## Questions for iTradeNetwork
 - is product id unique for different stores?
@@ -37,7 +36,7 @@
 - grooming the dataset
 - dataset seeding
 - calculating health factor of recipes
-- 
+
 ### Joseph
 - algorithm of how to get recipes for the flyer
 
