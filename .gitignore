@@ -42,3 +42,6 @@ yarn-debug.log*
 
 # gemfile lock
 Gemfile.lock
+
+# dataset
+db/MasterDF.csv

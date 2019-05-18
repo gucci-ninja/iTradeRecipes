@@ -28,8 +28,10 @@
 - is product id unique for different stores?
 - is it ok to assume the price on the dataset will be reflected in stores
 
+## What we're doing?
+
 ### Suhavi
-- create resources and general methods, basic frontend setup
+- create resource Item
 
 ### Ming
 - grooming the dataset
