@@ -30,8 +30,9 @@
 ## What we're doing?
 
 ### Suhavi
-- create resource Item
-
+- create resource Item // using data set
+- create Flyer resource // process // only needs controller
+- create Recipe resource // with name, picture_url, serialized items 
 ### Ming
 - grooming the dataset
 - dataset seeding

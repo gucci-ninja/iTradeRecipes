@@ -1,0 +1,12 @@
+= form_with model: @recipe do |f|
+    label Name
+    = f.text_field :name
+    br
+    label Image URL
+    = f.text_field :img_url
+    br
+    label Ingredient(s)
+    #tac-button Add more
+    = f.text_field :ingredients, multiple: true
+    #extra-tacs
+    = f.submit "submit"
