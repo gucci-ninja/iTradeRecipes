@@ -15,6 +15,11 @@
 /         td = item.audit_month
 
   / = link_to 'Generate Flier', generate_flier_items_path 
+- provide :head_tags do
+  script
+    | document.addEventListener("DOMContentLoaded", function(){
+    |   initMap(43.657611,-79.377252)
+    | });
 
 .jumbotron
   h1.display-3 iTradeRecipes
@@ -23,7 +28,10 @@
   p It uses utility classes for typography and spacing to space content out within the larger container.
   p.lead
     / a.btn.btn-primary.btn-lg href="#" role="button"  Learn more
-    - @stores.each do |store|
-      a.btn.btn-primary.btn-lg href="/items/generate_flier?store=#{store}" role="button" #{store}
-      br
-      br
+    / - @stores.each do |store|
+    /   a.btn.btn-primary.btn-lg href="/items/generate_flier?store=#{store}" role="button" #{store}
+    /   br
+    /   br
+
+    #map style="height: 500px"
+      | hellp

@@ -12,10 +12,11 @@ class ItemsController < ApplicationController
   end
 
   def generate_flier
-    @store = params[:store]
+    @store = Store.where(name: params[:store]).first # Store name
+    store_id = @store.store_id
     @flyer_results = []
     recipes = Recipe.all
-    store_ingredients = Item.where(store_id: 18293).map{|item| item.name}
+    store_ingredients = Item.where(store_id: store_id).map{|item| item.name}
     recipes.each do |recipe|
       ingredients = recipe.ingredients.split(",")
       match = ingredients != [""] ? match(ingredients, store_ingredients) : false
