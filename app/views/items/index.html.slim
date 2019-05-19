@@ -13,7 +13,15 @@
 /         td = item.price
 /         td = item.quantity
 /         td = item.audit_month
+- provide :head_tags do
+  script
+    | document.addEventListener("DOMContentLoaded", function(){
+    |   initMap(43.657611,-79.377252)
+    | });
+
 .container
   h1 Google Maps with Pins
 
   = link_to 'Generate Flier', generate_flier_items_path 
+  #map style="height: 500px"
+    | hellp
