@@ -44,7 +44,6 @@ yarn-debug.log*
 Gemfile.lock
 
 # dataset
-db/MasterDF.csv
-db/smalll.csv
+db/*.csv
 
 MasterDF/makeNewDataSet.py
