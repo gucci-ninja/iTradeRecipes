@@ -46,3 +46,5 @@ Gemfile.lock
 # dataset
 db/MasterDF.csv
 db/smalll.csv
+
+MasterDF/makeNewDataSet.py
