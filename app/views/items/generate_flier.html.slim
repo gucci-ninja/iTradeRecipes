@@ -1,9 +1,29 @@
 .jumbotron
-  h1.display-3 Flier for #{@store.name}
-  p.lead This is a recipe flier
+  h1.display-3 Flyer for #{@store.name}
+  p.lead This is a flyer consisting of recipes you can make with the items you buy.
   hr.my-4/
   p.lead
     / a.btn.btn-primary.btn-lg href="#" role="button"  Learn more
-    - @flyer_results.each do |result|
-      = result
-      br
+    / - @flyer_results.each do |result|
+    /   = image_tag(result.img_url, size: "200x200") if result.img_url.include?('http')
+    /   = result.name
+    /   table
+    /     tr
+    /       th Item
+    /       th Price
+    /     tbody
+    /       - result.ingredients.split(",").each do |ing|
+    /         tr
+    /           td = ing.upcase
+    /           td = "$#{Item.get_price(ing, @store.store_id)}"
+
+    .row
+      - @flyer_results.each do |result|
+        .col-3
+          .card.mb-3
+            h3.card-header #{result.name}
+            .card-body
+              = image_tag(result.img_url, size: "200x200") if result.img_url.include?('http')
+            ul.list-group.list-group-flush
+              - result.ingredients.split(",").each do |ing|
+                li.list-group-item #{ing.upcase} - $#{Item.get_price(ing, @store.store_id)}

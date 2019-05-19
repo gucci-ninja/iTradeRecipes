@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
     def create
         @recipe = Recipe.new(recipe_params)
         if @recipe.save
-            redirect_to(recipes_url)
+            redirect_to(root_url)
         else
             render :new
         end

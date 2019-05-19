@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
     recipes.each do |recipe|
       ingredients = recipe.ingredients.split(",")
       match = ingredients != [""] ? match(ingredients, store_ingredients) : false
-      match ? @flyer_results.push(recipe.ingredients) : nil
+      match ? @flyer_results.push(recipe) : nil
     end
   end
 

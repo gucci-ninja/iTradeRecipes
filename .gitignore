@@ -45,4 +45,4 @@ Gemfile.lock
 
 # dataset
 db/MasterDF.csv
-db/small.csv
+db/smalll.csv
