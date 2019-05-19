@@ -1,0 +1,10 @@
+.container
+  h1 Add Store
+  = form_with model: @store do |f|
+    .form-group
+      label Name
+      = f.text_field :name, class: "form-control"
+    .form-group
+      label ID
+      = f.text_field :store_id, class: "form-control"
+    = f.submit "Submit"

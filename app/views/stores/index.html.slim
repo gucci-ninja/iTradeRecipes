@@ -1,0 +1,9 @@
+table
+  tr
+    th ID
+    th Name
+  tbody
+    - @stores.each do |store|
+      tr
+        td = store.store_id
+        td = store.name
