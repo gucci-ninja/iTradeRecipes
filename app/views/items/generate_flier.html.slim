@@ -1,4 +1,9 @@
-.container
-    h1 This is where the Flier will be
-    - @flyer_results.each do |match|
-        = match
+.jumbotron
+  h1.display-3 Flier for #{@store}
+  p.lead This is a recipe flier
+  hr.my-4/
+  p.lead
+    / a.btn.btn-primary.btn-lg href="#" role="button"  Learn more
+    - @flyer_results.each do |result|
+      = result
+      br

@@ -13,7 +13,17 @@
 /         td = item.price
 /         td = item.quantity
 /         td = item.audit_month
-.container
-  h1 Google Maps with Pins
 
-  = link_to 'Generate Flier', generate_flier_items_path 
+  / = link_to 'Generate Flier', generate_flier_items_path 
+
+.jumbotron
+  h1.display-3 iTradeRecipes
+  p.lead This is a good description of our app
+  hr.my-4/
+  p It uses utility classes for typography and spacing to space content out within the larger container.
+  p.lead
+    / a.btn.btn-primary.btn-lg href="#" role="button"  Learn more
+    - @stores.each do |store|
+      a.btn.btn-primary.btn-lg href="/items/generate_flier?store=#{store}" role="button" #{store}
+      br
+      br
