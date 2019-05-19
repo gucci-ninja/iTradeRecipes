@@ -1,0 +1,13 @@
+table
+  tr
+    th ID
+    th Name
+    th Picture
+    th Ingredients
+  tbody
+    - @recipes.each do |recipe|
+      tr
+        td = recipe.id
+        td = recipe.name
+        td = recipe.img_url
+        td = recipe.ingredients

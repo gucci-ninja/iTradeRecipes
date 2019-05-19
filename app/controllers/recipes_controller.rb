@@ -1,5 +1,9 @@
 class RecipesController < ApplicationController
 
+    def index
+        @recipes = Recipe.all
+    end
+    
     def new
         @recipe = Recipe.new
         @ingredients = Item.all
@@ -7,9 +11,10 @@ class RecipesController < ApplicationController
 
     def create
         @recipe = Recipe.new(recipe_params)
-        respond_to do |format|
-            if @recipe.save
-            end
+        if @recipe.save
+            redirect_to(recipes_url)
+        else
+            render :new
         end
     end
 

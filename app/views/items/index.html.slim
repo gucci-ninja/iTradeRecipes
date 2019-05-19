@@ -1,15 +1,19 @@
-table
-  tr
-    th ID
-    th Name
-    th Price
-    th Quantity
-    th Audit Month
-  tbody
-    - @items.each do |item|
-      tr
-        td = item.id
-        td = item.name
-        td = item.price
-        td = item.quantity
-        td = item.audit_month
+/ table
+/   tr
+/     th ID
+/     th Name
+/     th Price
+/     th Quantity
+/     th Audit Month
+/   tbody
+/     - @items.each do |item|
+/       tr
+/         td = item.id
+/         td = item.name
+/         td = item.price
+/         td = item.quantity
+/         td = item.audit_month
+.container
+  h1 Google Maps with Pins
+
+  = link_to 'Generate Flier', generate_flier_items_path 
