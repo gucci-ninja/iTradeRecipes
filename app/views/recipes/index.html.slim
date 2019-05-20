@@ -4,6 +4,8 @@ table
     th Name
     th Picture
     th Ingredients
+    th Edit
+    th Delete
   tbody
     - @recipes.each do |recipe|
       tr
@@ -11,3 +13,7 @@ table
         td = recipe.name
         td = recipe.img_url
         td = recipe.ingredients
+        td = link_to 'Edit', edit_recipe_path(recipe)
+        td = link_to 'Delete', recipe_path(recipe), method: :delete, data:{confirm: 'Are you sure?'}
+
+= link_to 'New', new_recipe_path

@@ -1,0 +1,13 @@
+.container
+  h1 Add Recipe
+  = form_with model: @recipe do |f|
+    .form-group
+      label Name
+      = f.text_field :name, class: "form-control"
+    .form-group
+      label Image URL
+      = f.text_field :img_url, class: "form-control"
+    .form-group
+      label Ingredient(s)
+      = f.text_field :ingredients, class: "form-control"
+    = f.submit "Submit"
